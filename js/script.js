@@ -23,7 +23,8 @@ $(document).ready(function () {
 					data: {'query': term, 'language' : 'ru-RU', 'api_key': 'd272326e467344029e68e3c4ff0b4059'},
 					success: function(data){
 						$.each(data.results, function (keyFilm, valFilm) {
-							
+// make film presentation more user friendly, example https://www.themoviedb.org/search?query=home&language=en-US
+// 							try get attributes like valFilm.popularity
 							var $filmTable=$('<table class="table" align="center" width="200"></table>');
 							$.each(valFilm, function(keyAttr, valAttr)
 							{
